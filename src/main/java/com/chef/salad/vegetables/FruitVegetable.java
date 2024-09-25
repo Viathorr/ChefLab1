@@ -13,6 +13,6 @@ public class FruitVegetable extends Vegetable {
     }
 
     private void dice() {
-        System.out.printf("Dicing %s into small cubes.%n", name);
+        System.out.printf("Dicing %s into small cubes.%n", getName());
     }
 }

@@ -14,10 +14,10 @@ public class LeafyGreen extends Vegetable {
     }
 
     private void trimStems() {
-        System.out.printf("Trimming stems from %s.%n", name);
+        System.out.printf("Trimming stems from %s.%n", getName());
     }
 
     private void tearLeaves() {
-        System.out.printf("Tearing %s into pieces.%n", name);
+        System.out.printf("Tearing %s into pieces.%n", getName());
     }
 }

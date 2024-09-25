@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="903eaf35-deb9-4958-949c-99e3d3452a82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/Chef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/Salad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/BulbVegetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/BulbVegetable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/FruitVegetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/FruitVegetable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/LeafyGreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/LeafyGreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/RootVegetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/RootVegetable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/Vegetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/Vegetable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +29,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -34,18 +43,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Amina/Documents/java-projects/Lab1",
-    "onboarding.tips.debug.path": "C:/Users/Amina/Documents/java-projects/Lab1/src/main/java/com/chef/salad/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Amina/Documents/java-projects/beginning&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Amina/Documents/java-projects/Lab1/src/main/java/com/chef/salad/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.chef" />

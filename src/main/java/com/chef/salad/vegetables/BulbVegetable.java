@@ -14,10 +14,10 @@ public class BulbVegetable extends Vegetable {
     }
 
     private void slice() {
-        System.out.printf("Slicing %s.%n", name);
+        System.out.printf("Slicing %s.%n", getName());
     }
 
     private void soak() {
-        System.out.printf("Soaking %s to reduce pungency.%n", name);
+        System.out.printf("Soaking %s to reduce pungency.%n", getName());
     }
 }

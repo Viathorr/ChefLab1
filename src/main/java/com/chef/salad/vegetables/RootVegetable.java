@@ -14,10 +14,10 @@ public class RootVegetable extends Vegetable {
     }
 
     private void boil() {
-        System.out.printf("Boiling %s before shredding.%n", name);
+        System.out.printf("Boiling %s before shredding.%n", getName());
     }
 
     private void shred() {
-        System.out.printf("Shredding %s for salad.%n", name);
+        System.out.printf("Shredding %s for salad.%n", getName());
     }
 }

@@ -1,9 +1,9 @@
 package com.chef.salad.vegetables;
 
 abstract public class Vegetable {
-    protected String name;
-    protected double weight;
-    protected double caloriesPer100g;
+    private String name;
+    private double weight;
+    private double caloriesPer100g;
 
     public Vegetable() {}
 
@@ -46,7 +46,7 @@ abstract public class Vegetable {
         this.caloriesPer100g = caloriesPer100g;
     }
 
-    public double totalCalories() {
+    public double calculateTotalCalories() {
         return (weight / 100) * caloriesPer100g;
     }
 
