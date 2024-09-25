@@ -1,0 +1,3 @@
+Bulb, Onion, 50.0, 40.0
+Leafy, Lettuce, 75.0, 15.0
+Fruit, Cucumber, 250.0, 16.0
