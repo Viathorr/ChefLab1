@@ -15,11 +15,7 @@ abstract public class Vegetable {
 
     @Override
     public String toString() {
-        return "Vegetable{" +
-                "name='" + name + '\'' +
-                ", weight=" + weight +
-                ", caloriesPer100g=" + caloriesPer100g +
-                '}';
+        return name + " (" + weight + "g, " + caloriesPer100g + " cal/100g)";
     }
 
     public String getName() {
