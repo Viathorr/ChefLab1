@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="903eaf35-deb9-4958-949c-99e3d3452a82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/SaladMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/SaladMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/Vegetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/Vegetable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/salad1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/salad1.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +51,7 @@
     "JUnit.VegetableCalorieComparatorTest.compare.executor": "Run",
     "JUnit.VegetableTest.calculateTotalCalories.executor": "Run",
     "JUnit.VegetableTest.testToString.executor": "Run",
+    "JUnit.java in Lab1.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
@@ -82,7 +80,7 @@
       <recent name="com.chef.salad.vegetables" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SaladMakerTest">
+  <component name="RunManager">
     <configuration name="AdvancedSaladTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab1" />
       <extension name="coverage">
@@ -94,22 +92,6 @@
       <option name="PACKAGE_NAME" value="com.chef.salad" />
       <option name="MAIN_CLASS_NAME" value="com.chef.salad.AdvancedSaladTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChefTest.cookSalad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chef.salad.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.chef.salad" />
-      <option name="MAIN_CLASS_NAME" value="com.chef.salad.ChefTest" />
-      <option name="METHOD_NAME" value="cookSalad" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,13 +143,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in Lab1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in Lab1" />
         <item itemvalue="JUnit.SaladMakerTest" />
         <item itemvalue="JUnit.SaladMakerTest.readVegetableRecipes" />
         <item itemvalue="JUnit.AdvancedSaladTest" />
         <item itemvalue="JUnit.SaladTest.addVegetable" />
-        <item itemvalue="JUnit.ChefTest.cookSalad" />
       </list>
     </recent_temporary>
   </component>

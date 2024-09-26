@@ -94,7 +94,6 @@ public class SaladMaker {
 
     public static List<Vegetable> readVegetableRecipes(String filename) {
         List<Vegetable> vegetables = new ArrayList<>();
-        System.out.println(filename);
 
         try (InputStream inputStream = SaladMaker.class.getResourceAsStream(filename);
              BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
