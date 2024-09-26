@@ -12,7 +12,6 @@ import com.chef.salad.vegetables.comparators.VegetableCalorieComparator;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -50,41 +49,41 @@ public class SaladMaker {
                 String option = scanner.nextLine().trim();
 
                 switch (option) {
-                    case "1":
-                        System.out.println("Total calories: " + salad.calculateTotalCalories());
-                        break;
+                case "1":
+                    System.out.println("Total calories: " + salad.calculateTotalCalories());
+                    break;
 
-                    case "2":
-                        VegetableCalorieComparator comparator = new VegetableCalorieComparator();
-                        salad.sortVegetables(comparator);
+                case "2":
+                    VegetableCalorieComparator comparator = new VegetableCalorieComparator();
+                    salad.sortVegetables(comparator);
 
-                        System.out.println("Sorted vegetables: ");
-                        for (Vegetable v : salad.getVegetables()) {
-                            System.out.println(v);
-                        }
-                        break;
+                    System.out.println("Sorted vegetables: ");
+                    for (Vegetable v : salad.getVegetables()) {
+                        System.out.println(v);
+                    }
+                    break;
 
-                    case "3":
-                        System.out.println("Enter min calories: ");
-                        double minCalories = scanner.nextDouble();
-                        System.out.println("Enter max calories: ");
-                        double maxCalories = scanner.nextDouble();
-                        scanner.nextLine();
+                case "3":
+                    System.out.println("Enter min calories: ");
+                    double minCalories = scanner.nextDouble();
+                    System.out.println("Enter max calories: ");
+                    double maxCalories = scanner.nextDouble();
+                    scanner.nextLine();
 
-                        List<Vegetable> foundVegetables = salad.findVegetablesByCaloriesRange(minCalories, maxCalories);
+                    List<Vegetable> foundVegetables = salad.findVegetablesByCaloriesRange(minCalories, maxCalories);
 
-                        System.out.println("Found Vegetables: ");
-                        for (Vegetable vegetable : foundVegetables) {
-                            System.out.println(vegetable);
-                        }
-                        break;
+                    System.out.println("Found Vegetables: ");
+                    for (Vegetable vegetable : foundVegetables) {
+                        System.out.println(vegetable);
+                    }
+                    break;
 
-                    case "4":
-                        back = true;
-                        break;
+                case "4":
+                    back = true;
+                    break;
 
-                    default:
-                        System.out.println("Invalid option. Please try again.");
+                default:
+                    System.out.println("Invalid option. Please try again.");
                 }
             } while (!back);
         }
@@ -93,8 +92,9 @@ public class SaladMaker {
         System.out.println("Quitting...");
     }
 
-    private static List<Vegetable> readVegetableRecipes(String filename) {
+    public static List<Vegetable> readVegetableRecipes(String filename) {
         List<Vegetable> vegetables = new ArrayList<>();
+        System.out.println(filename);
 
         try (InputStream inputStream = SaladMaker.class.getResourceAsStream(filename);
              BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
@@ -120,7 +120,7 @@ public class SaladMaker {
         return vegetables;
     }
 
-    private static Vegetable createVegetable(String category, String name, double weight, double caloriesPer100g) {
+    public static Vegetable createVegetable(String category, String name, double weight, double caloriesPer100g) {
         return switch (category.toLowerCase()) {
             case "root" -> new RootVegetable(name, weight, caloriesPer100g);
             case "fruit" -> new FruitVegetable(name, weight, caloriesPer100g);

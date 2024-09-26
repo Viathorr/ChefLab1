@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="903eaf35-deb9-4958-949c-99e3d3452a82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/SaladMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/SaladMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/Vegetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/Vegetable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/salad1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/salad1.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -24,7 +28,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -42,7 +46,17 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "Application.SaladMaker.executor": "Run",
+    "JUnit.AdvancedSaladTest.executor": "Run",
+    "JUnit.ChefTest.cookSalad.executor": "Run",
+    "JUnit.SaladMakerTest.executor": "Run",
+    "JUnit.SaladMakerTest.readVegetableRecipes.executor": "Run",
+    "JUnit.SaladTest.addVegetable.executor": "Run",
+    "JUnit.VegetableCalorieComparatorTest.compare.executor": "Run",
+    "JUnit.VegetableTest.calculateTotalCalories.executor": "Run",
+    "JUnit.VegetableTest.testToString.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -51,9 +65,111 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Amina\Documents\java-projects\Lab1\src\test\resources" />
+      <recent name="C:\Users\Amina\Documents\java-projects\Lab1\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.chef" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.chef" />
+      <recent name="com.chef.salad" />
+      <recent name="com.chef.salad.vegetables.comparators" />
+      <recent name="com.chef.salad.vegetables" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SaladMakerTest">
+    <configuration name="AdvancedSaladTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chef.salad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chef.salad" />
+      <option name="MAIN_CLASS_NAME" value="com.chef.salad.AdvancedSaladTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChefTest.cookSalad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chef.salad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chef.salad" />
+      <option name="MAIN_CLASS_NAME" value="com.chef.salad.ChefTest" />
+      <option name="METHOD_NAME" value="cookSalad" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaladMakerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chef.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chef" />
+      <option name="MAIN_CLASS_NAME" value="com.chef.SaladMakerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaladMakerTest.readVegetableRecipes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chef.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chef" />
+      <option name="MAIN_CLASS_NAME" value="com.chef.SaladMakerTest" />
+      <option name="METHOD_NAME" value="readVegetableRecipes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaladTest.addVegetable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chef.salad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chef.salad" />
+      <option name="MAIN_CLASS_NAME" value="com.chef.salad.SaladTest" />
+      <option name="METHOD_NAME" value="addVegetable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SaladMakerTest" />
+        <item itemvalue="JUnit.SaladMakerTest.readVegetableRecipes" />
+        <item itemvalue="JUnit.AdvancedSaladTest" />
+        <item itemvalue="JUnit.SaladTest.addVegetable" />
+        <item itemvalue="JUnit.ChefTest.cookSalad" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

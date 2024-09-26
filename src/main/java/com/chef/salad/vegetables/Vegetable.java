@@ -2,7 +2,7 @@ package com.chef.salad.vegetables;
 
 abstract public class Vegetable {
     private String name;
-    private double weight;
+    private double weight; // in grams
     private double caloriesPer100g;
 
     public Vegetable() {}

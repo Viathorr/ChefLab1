@@ -1,3 +1,4 @@
 Root, Carrot, 150.0, 41.0
+Fruit, Tomato, 150.0, 20.0
+Bulb, Onion, 120.0, 40.0
 Leafy, Spinach, 100.0, 23.0
-Fruit, Tomato, 200.0, 20.0
