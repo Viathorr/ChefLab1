@@ -8,11 +8,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/SaladMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/SaladMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/Chef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/RecipeFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/RecipeFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/Salad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/SaladMakerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/salad/AdvancedSaladTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/Vegetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/Vegetable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/cookingstrategies/BulbVegetableCookingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/cookingstrategies/BulbVegetableCookingStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/cookingstrategies/RootVegetableCookingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/vegetables/cookingstrategies/RootVegetableCookingStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/salad/ChefTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chef/salad/ChefTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/salad/RecipeFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chef/salad/RecipeFileReaderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/salad/SaladTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chef/salad/SaladTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/salad/vegetables/VegetableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chef/salad/vegetables/VegetableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/salad/vegetables/comparators/VegetableCalorieComparatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chef/salad/vegetables/comparators/VegetableCalorieComparatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,6 +61,7 @@
     "JUnit.SaladMakerTest.executor": "Run",
     "JUnit.SaladMakerTest.readVegetableRecipes.executor": "Run",
     "JUnit.SaladTest.addVegetable.executor": "Run",
+    "JUnit.SaladTest.executor": "Run",
     "JUnit.VegetableCalorieComparatorTest.compare.executor": "Run",
     "JUnit.VegetableTest.calculateTotalCalories.executor": "Run",
     "JUnit.VegetableTest.testToString.executor": "Run",
@@ -134,16 +141,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SaladMakerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SaladTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.chef.*" />
+          <option name="PATTERN" value="com.chef.salad.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.chef" />
-      <option name="MAIN_CLASS_NAME" value="com.chef.SaladMakerTest" />
+      <option name="PACKAGE_NAME" value="com.chef.salad" />
+      <option name="MAIN_CLASS_NAME" value="com.chef.salad.SaladTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ChefTest.cookSalad" />
         <item itemvalue="JUnit.java in Lab1" />
+        <item itemvalue="JUnit.SaladTest" />
+        <item itemvalue="JUnit.ChefTest.cookSalad" />
         <item itemvalue="JUnit.RecipeFileReaderTest" />
         <item itemvalue="JUnit.AdvancedSaladTest" />
-        <item itemvalue="JUnit.SaladMakerTest" />
       </list>
     </recent_temporary>
   </component>

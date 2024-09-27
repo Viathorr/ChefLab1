@@ -1,7 +1,5 @@
 package com.chef.salad;
 
-import com.chef.salad.vegetables.FruitVegetable;
-import com.chef.salad.vegetables.RootVegetable;
 import com.chef.salad.vegetables.Vegetable;
 import org.junit.jupiter.api.Test;
 
@@ -16,8 +14,8 @@ class ChefTest {
 
     @Test
     void cookSalad() {
-        RootVegetable beetroot = mock(RootVegetable.class);
-        FruitVegetable tomato = mock(FruitVegetable.class);
+        Vegetable beetroot = mock(Vegetable.class);
+        Vegetable tomato = mock(Vegetable.class);
 
         List<Vegetable> vegetables = Arrays.asList(beetroot, tomato);
 

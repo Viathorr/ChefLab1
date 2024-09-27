@@ -1,8 +1,9 @@
 package com.chef.salad.vegetables.comparators;
 
-import com.chef.salad.vegetables.FruitVegetable;
-import com.chef.salad.vegetables.LeafyGreen;
-import com.chef.salad.vegetables.RootVegetable;
+import com.chef.salad.vegetables.Vegetable;
+import com.chef.salad.vegetables.cookingstrategies.FruitVegetableCookingStrategy;
+import com.chef.salad.vegetables.cookingstrategies.LeafyGreenCookingStrategy;
+import com.chef.salad.vegetables.cookingstrategies.RootVegetableCookingStrategy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,9 +14,12 @@ class VegetableCalorieComparatorTest {
     void compare() {
         VegetableCalorieComparator comparator = new VegetableCalorieComparator();
 
-        RootVegetable beetroot = new RootVegetable("beetroot", 200.0, 43.0);
-        FruitVegetable tomato = new FruitVegetable("tomato", 150.0, 20.0);
-        LeafyGreen spinach = new LeafyGreen("spinach", 50.0, 43.0);
+        Vegetable beetroot = new Vegetable("beetroot", 200.0, 43.0,
+                new RootVegetableCookingStrategy());
+        Vegetable tomato = new Vegetable("tomato", 150.0, 20.0,
+                new FruitVegetableCookingStrategy());
+        Vegetable spinach = new Vegetable("spinach", 50.0, 43.0,
+                new LeafyGreenCookingStrategy());
 
         assertTrue(comparator.compare(beetroot, tomato) > 0);
 

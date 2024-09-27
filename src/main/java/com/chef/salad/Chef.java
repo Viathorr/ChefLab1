@@ -20,9 +20,10 @@ public class Chef {
 
         System.out.println("Cooking a salad:");
 
-        vegetables.stream()
-                .peek(Vegetable::prepareForSalad)
-                .forEach(cookedSalad::addVegetable);
+        vegetables.forEach(v -> {
+            v.prepareForSalad();
+            cookedSalad.addVegetable(v);
+        });
 
         return cookedSalad;
     }

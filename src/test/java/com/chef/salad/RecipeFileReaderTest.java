@@ -1,11 +1,8 @@
 package com.chef.salad;
 
-import com.chef.SaladMaker;
-import com.chef.salad.vegetables.*;
+import com.chef.salad.vegetables.Vegetable;
 import org.junit.jupiter.api.Test;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,9 +13,7 @@ class RecipeFileReaderTest {
 
     @Test
     void readVegetableRecipe() {
-        InputStream inputStream = SaladMaker.class.getResourceAsStream(TEST_FILE);
-
-        List<Vegetable> vegetables = RecipeFileReader.readVegetableRecipe(new InputStreamReader(inputStream));
+        List<Vegetable> vegetables = RecipeFileReader.readVegetableRecipe(TEST_FILE);
 
         assertEquals(4, vegetables.size());
 

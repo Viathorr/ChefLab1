@@ -1,16 +1,20 @@
 package com.chef.salad.vegetables;
 
-abstract public class Vegetable {
+import com.chef.salad.vegetables.cookingstrategies.CookingStrategy;
+
+public class Vegetable {
     private String name;
     private double weight; // in grams
     private double caloriesPer100g;
+    private CookingStrategy cookingStrategy;
 
     public Vegetable() {}
 
-    public Vegetable(String name, double weight, double caloriesPer100g) {
+    public Vegetable(String name, double weight, double caloriesPer100g, CookingStrategy cookingStrategy) {
         this.name = name;
         this.weight = weight;
         this.caloriesPer100g = caloriesPer100g;
+        this.cookingStrategy = cookingStrategy;
     }
 
     @Override
@@ -46,5 +50,7 @@ abstract public class Vegetable {
         return (weight / 100) * caloriesPer100g;
     }
 
-    abstract public void prepareForSalad();
+    public void prepareForSalad() {
+        cookingStrategy.cook(this);
+    }
 }

@@ -6,8 +6,6 @@ import com.chef.salad.RecipeFileReader;
 import com.chef.salad.vegetables.Vegetable;
 import com.chef.salad.vegetables.comparators.VegetableCalorieComparator;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,15 +22,8 @@ public class SaladMaker {
                 break;
             }
 
-            InputStream inputStream = SaladMaker.class.getResourceAsStream(recipeFileName);
-
-            if (inputStream == null) {
-                System.out.println("File not found. Please try again.");
-                continue;
-            }
-
             Chef chef = new Chef();
-            chef.setVegetables(RecipeFileReader.readVegetableRecipe(new InputStreamReader(inputStream)));
+            chef.setVegetables(RecipeFileReader.readVegetableRecipe(recipeFileName));
 
             Salad salad = chef.cookSalad();
 
@@ -59,11 +50,10 @@ public class SaladMaker {
 
                 case "2":
                     VegetableCalorieComparator comparator = new VegetableCalorieComparator();
-                    salad.sortVegetables(comparator);
+                    List<Vegetable> sortedVegetables = salad.getSortedVegetables(comparator);
 
                     System.out.println("Sorted vegetables: ");
-                    salad.getVegetables()
-                            .forEach(System.out::println);
+                    sortedVegetables.forEach(System.out::println);
 
                     break;
 

@@ -1,9 +1,9 @@
 package com.chef.salad;
 
-import com.chef.salad.vegetables.FruitVegetable;
-import com.chef.salad.vegetables.RootVegetable;
 import com.chef.salad.vegetables.Vegetable;
 import com.chef.salad.vegetables.comparators.VegetableCalorieComparator;
+import com.chef.salad.vegetables.cookingstrategies.FruitVegetableCookingStrategy;
+import com.chef.salad.vegetables.cookingstrategies.RootVegetableCookingStrategy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,24 +15,38 @@ import static org.junit.jupiter.api.Assertions.*;
 class SaladTest {
 
     private Salad salad;
-    private RootVegetable beetroot;
-    private FruitVegetable tomato;
+    private Vegetable beetroot;
+    private Vegetable tomato;
 
     @BeforeEach
     public void setUp() {
         salad = new Salad(new ArrayList<>());
 
-        beetroot = new RootVegetable("beetroot", 200.0, 43.0);
-        tomato = new FruitVegetable("tomato", 150.0, 20.0);
+        beetroot = new Vegetable("beetroot", 200.0, 43.0,
+                new RootVegetableCookingStrategy());
+        tomato = new Vegetable("tomato", 150.0, 20.0,
+                new FruitVegetableCookingStrategy());
 
         salad.addVegetable(beetroot);
         salad.addVegetable(tomato);
     }
 
     @Test
+    void getSortedVegetables() {
+        VegetableCalorieComparator comparator = new VegetableCalorieComparator();
+
+        List<Vegetable> sortedVegetables = salad.getSortedVegetables(comparator);
+
+        assertEquals(tomato, sortedVegetables.get(0));
+        assertEquals(beetroot, sortedVegetables.get(1));
+    }
+
+    @Test
     void addVegetable() {
-        RootVegetable beetroot = new RootVegetable("beetroot", 200.0, 43.0);
-        FruitVegetable tomato = new FruitVegetable("tomato", 150.0, 20.0);
+        Vegetable beetroot = new Vegetable("beetroot", 200.0, 43.0,
+                new RootVegetableCookingStrategy());
+        Vegetable tomato = new Vegetable("tomato", 150.0, 20.0,
+                new FruitVegetableCookingStrategy());
 
         Salad salad = new Salad();
 
