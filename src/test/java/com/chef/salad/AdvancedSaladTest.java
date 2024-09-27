@@ -14,42 +14,42 @@ import java.util.List;
 
 class AdvancedSaladTest {
 
-    private AdvancedSalad advancedSalad;
+    private Salad salad;
     private RootVegetable beetroot;
     private FruitVegetable tomato;
 
     @BeforeEach
     public void setUp() {
-        advancedSalad = new AdvancedSalad(new ArrayList<>());
+        salad = new Salad(new ArrayList<>());
 
         beetroot = new RootVegetable("beetroot", 200.0, 43.0);
         tomato = new FruitVegetable("tomato", 150.0, 20.0);
 
-        advancedSalad.addVegetable(beetroot);
-        advancedSalad.addVegetable(tomato);
+        salad.addVegetable(beetroot);
+        salad.addVegetable(tomato);
     }
 
     @Test
     void calculateTotalCalories() {
         double expectedCalories = beetroot.calculateTotalCalories() + tomato.calculateTotalCalories();
 
-        assertEquals(expectedCalories, advancedSalad.calculateTotalCalories(), 0.001);
+        assertEquals(expectedCalories, salad.calculateTotalCalories(), 0.001);
     }
 
     @Test
     void sortVegetables() {
         VegetableCalorieComparator comparator = new VegetableCalorieComparator();
 
-        advancedSalad.sortVegetables(comparator);
+        salad.sortVegetables(comparator);
 
-        List<Vegetable> sortedVegetables = advancedSalad.getVegetables();
+        List<Vegetable> sortedVegetables = salad.getVegetables();
         assertEquals(tomato, sortedVegetables.get(0)); // Vegetable with lower calories should come first
         assertEquals(beetroot, sortedVegetables.get(1));
     }
 
     @Test
     void findVegetablesByCaloriesRange() {
-        List<Vegetable> result = advancedSalad.findVegetablesByCaloriesRange(10, 31);
+        List<Vegetable> result = salad.findVegetablesByCaloriesRange(10, 31);
 
         assertEquals(1, result.size());
         assertTrue(result.contains(tomato));

@@ -1,7 +1,7 @@
 package com.chef;
 
-import com.chef.salad.AdvancedSalad;
 import com.chef.salad.Chef;
+import com.chef.salad.Salad;
 import com.chef.salad.vegetables.Vegetable;
 import com.chef.salad.vegetables.BulbVegetable;
 import com.chef.salad.vegetables.FruitVegetable;
@@ -36,7 +36,7 @@ public class SaladMaker {
                 continue;
             }
 
-            AdvancedSalad salad = Chef.cookSalad(vegetables);
+            Salad salad = Chef.cookSalad(vegetables);
             boolean back = false;
 
             do {

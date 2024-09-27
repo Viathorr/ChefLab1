@@ -4,10 +4,10 @@ import java.util.List;
 import com.chef.salad.vegetables.Vegetable;
 
 public class Chef {
-    static public AdvancedSalad cookSalad(List<Vegetable> vegetables) {
+    static public Salad cookSalad(List<Vegetable> vegetables) {
         System.out.println("Cooking a salad:");
 
-        AdvancedSalad cookedSalad = new AdvancedSalad();
+        Salad cookedSalad = new Salad();
 
         for (Vegetable v : vegetables) {
             v.prepareForSalad();

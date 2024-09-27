@@ -1,5 +1,6 @@
 package com.chef.salad;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,5 +21,28 @@ public class Salad {
 
     public void addVegetable(Vegetable vegetable) {
         vegetables.add(vegetable);
+    }
+
+    public double calculateTotalCalories() {
+        return vegetables.stream()
+                .mapToDouble(Vegetable::calculateTotalCalories)
+                .sum();
+    }
+
+    public void sortVegetables(Comparator<Vegetable> comparator) {
+        vegetables.sort(comparator);
+    }
+
+    public List<Vegetable> findVegetablesByCaloriesRange(double min, double max) {
+        List<Vegetable> result = new ArrayList<>();
+
+        for (Vegetable v : vegetables) {
+            double calories = v.calculateTotalCalories();
+            if (calories >= min && calories <= max) {
+                result.add(v);
+            }
+        }
+
+        return result;
     }
 }

@@ -20,7 +20,7 @@ class ChefTest {
 
         List<Vegetable> vegetables = Arrays.asList(beetroot, tomato);
 
-        AdvancedSalad cookedSalad = Chef.cookSalad(vegetables);
+        Salad cookedSalad = Chef.cookSalad(vegetables);
 
         verify(beetroot).prepareForSalad();
         verify(tomato).prepareForSalad();
