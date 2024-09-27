@@ -9,7 +9,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/SaladMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/SaladMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/Chef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chef/salad/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chef/salad/Salad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/salad/AdvancedSaladTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chef/salad/AdvancedSaladTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/SaladMakerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/salad/AdvancedSaladTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/salad/ChefTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chef/salad/ChefTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chef/salad/SaladTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chef/salad/SaladTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,30 +44,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SaladMaker.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdvancedSaladTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ChefTest.cookSalad.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SaladMakerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SaladMakerTest.readVegetableRecipes.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SaladTest.addVegetable.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VegetableCalorieComparatorTest.compare.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VegetableTest.calculateTotalCalories.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VegetableTest.testToString.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.java in Lab1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Amina/Documents/java-projects/beginning&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Amina/Documents/java-projects/Lab1/src/main/java/com/chef/salad/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Application.SaladMaker.executor": "Run",
+    "JUnit.AdvancedSaladTest.executor": "Run",
+    "JUnit.ChefTest.cookSalad.executor": "Run",
+    "JUnit.RecipeFileReaderTest.executor": "Run",
+    "JUnit.SaladMakerTest.executor": "Run",
+    "JUnit.SaladMakerTest.readVegetableRecipes.executor": "Run",
+    "JUnit.SaladTest.addVegetable.executor": "Run",
+    "JUnit.VegetableCalorieComparatorTest.compare.executor": "Run",
+    "JUnit.VegetableTest.calculateTotalCalories.executor": "Run",
+    "JUnit.VegetableTest.testToString.executor": "Run",
+    "JUnit.java in Lab1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Amina/Documents/java-projects/beginning",
+    "onboarding.tips.debug.path": "C:/Users/Amina/Documents/java-projects/Lab1/src/main/java/com/chef/salad/Main.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -77,8 +81,8 @@
       <recent name="com.chef" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.chef" />
       <recent name="com.chef.salad" />
+      <recent name="com.chef" />
       <recent name="com.chef.salad.vegetables.comparators" />
       <recent name="com.chef.salad.vegetables" />
     </key>
@@ -99,6 +103,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ChefTest.cookSalad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chef.salad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chef.salad" />
+      <option name="MAIN_CLASS_NAME" value="com.chef.salad.ChefTest" />
+      <option name="METHOD_NAME" value="cookSalad" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecipeFileReaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chef.salad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chef.salad" />
+      <option name="MAIN_CLASS_NAME" value="com.chef.salad.RecipeFileReaderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SaladMakerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab1" />
       <extension name="coverage">
@@ -114,38 +149,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SaladMakerTest.readVegetableRecipes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chef.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.chef" />
-      <option name="MAIN_CLASS_NAME" value="com.chef.SaladMakerTest" />
-      <option name="METHOD_NAME" value="readVegetableRecipes" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SaladTest.addVegetable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chef.salad.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.chef.salad" />
-      <option name="MAIN_CLASS_NAME" value="com.chef.salad.SaladTest" />
-      <option name="METHOD_NAME" value="addVegetable" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="java in Lab1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab1" />
       <option name="TEST_OBJECT" value="directory" />
@@ -156,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdvancedSaladTest" />
+        <item itemvalue="JUnit.ChefTest.cookSalad" />
         <item itemvalue="JUnit.java in Lab1" />
+        <item itemvalue="JUnit.RecipeFileReaderTest" />
+        <item itemvalue="JUnit.AdvancedSaladTest" />
         <item itemvalue="JUnit.SaladMakerTest" />
-        <item itemvalue="JUnit.SaladMakerTest.readVegetableRecipes" />
-        <item itemvalue="JUnit.SaladTest.addVegetable" />
       </list>
     </recent_temporary>
   </component>

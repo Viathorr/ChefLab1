@@ -4,6 +4,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.stream.Collectors;
+
 import com.chef.salad.vegetables.Vegetable;
 
 public class Salad {
@@ -34,15 +36,8 @@ public class Salad {
     }
 
     public List<Vegetable> findVegetablesByCaloriesRange(double min, double max) {
-        List<Vegetable> result = new ArrayList<>();
-
-        for (Vegetable v : vegetables) {
-            double calories = v.calculateTotalCalories();
-            if (calories >= min && calories <= max) {
-                result.add(v);
-            }
-        }
-
-        return result;
+        return vegetables.stream()
+                .filter(v -> v.calculateTotalCalories() >= min && v.calculateTotalCalories() <= max)
+                .collect(Collectors.toList());
     }
 }

@@ -2,17 +2,12 @@ package com.chef;
 
 import com.chef.salad.Chef;
 import com.chef.salad.Salad;
+import com.chef.salad.RecipeFileReader;
 import com.chef.salad.vegetables.Vegetable;
-import com.chef.salad.vegetables.BulbVegetable;
-import com.chef.salad.vegetables.FruitVegetable;
-import com.chef.salad.vegetables.RootVegetable;
-import com.chef.salad.vegetables.LeafyGreen;
 import com.chef.salad.vegetables.comparators.VegetableCalorieComparator;
 
-import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -29,14 +24,23 @@ public class SaladMaker {
                 break;
             }
 
-            List<Vegetable> vegetables = readVegetableRecipes(recipeFileName);
+            InputStream inputStream = SaladMaker.class.getResourceAsStream(recipeFileName);
 
-            if (vegetables.isEmpty()) {
-                System.out.println("No vegetables found or error reading the file. Please try again.");
+            if (inputStream == null) {
+                System.out.println("File not found. Please try again.");
                 continue;
             }
 
-            Salad salad = Chef.cookSalad(vegetables);
+            Chef chef = new Chef();
+            chef.setVegetables(RecipeFileReader.readVegetableRecipe(new InputStreamReader(inputStream)));
+
+            Salad salad = chef.cookSalad();
+
+            if (salad.getVegetables().isEmpty()) {
+                System.out.println("Salad has no vegetables. Please try again.");
+                continue;
+            }
+
             boolean back = false;
 
             do {
@@ -58,9 +62,9 @@ public class SaladMaker {
                     salad.sortVegetables(comparator);
 
                     System.out.println("Sorted vegetables: ");
-                    for (Vegetable v : salad.getVegetables()) {
-                        System.out.println(v);
-                    }
+                    salad.getVegetables()
+                            .forEach(System.out::println);
+
                     break;
 
                 case "3":
@@ -73,13 +77,13 @@ public class SaladMaker {
                     List<Vegetable> foundVegetables = salad.findVegetablesByCaloriesRange(minCalories, maxCalories);
 
                     System.out.println("Found Vegetables: ");
-                    for (Vegetable vegetable : foundVegetables) {
-                        System.out.println(vegetable);
-                    }
+                    foundVegetables.forEach(System.out::println);
+
                     break;
 
                 case "4":
                     back = true;
+
                     break;
 
                 default:
@@ -90,45 +94,5 @@ public class SaladMaker {
 
         scanner.close();
         System.out.println("Quitting...");
-    }
-
-    public static List<Vegetable> readVegetableRecipes(String filename) {
-        List<Vegetable> vegetables = new ArrayList<>();
-
-        try (InputStream inputStream = SaladMaker.class.getResourceAsStream(filename);
-             BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
-            String line;
-
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(", ");
-                String category = parts[0].trim();
-                String name = parts[1].trim();
-                double weight = Double.parseDouble(parts[2].trim());
-                double caloriesPer100g = Double.parseDouble(parts[3].trim());
-
-                Vegetable vegetable = createVegetable(category, name, weight, caloriesPer100g);
-
-                if (vegetable != null) {
-                    vegetables.add(vegetable);
-                }
-            }
-        } catch (Exception e) {
-            System.out.println("Error reading file: " + e.getMessage());
-        }
-
-        return vegetables;
-    }
-
-    public static Vegetable createVegetable(String category, String name, double weight, double caloriesPer100g) {
-        return switch (category.toLowerCase()) {
-            case "root" -> new RootVegetable(name, weight, caloriesPer100g);
-            case "fruit" -> new FruitVegetable(name, weight, caloriesPer100g);
-            case "bulb" -> new BulbVegetable(name, weight, caloriesPer100g);
-            case "leafy" -> new LeafyGreen(name, weight, caloriesPer100g);
-            default -> {
-                System.out.println("Unknown vegetable category: " + category);
-                yield null;
-            }
-        };
     }
 }

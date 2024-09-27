@@ -1,18 +1,28 @@
 package com.chef.salad;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.chef.salad.vegetables.Vegetable;
 
 public class Chef {
-    static public Salad cookSalad(List<Vegetable> vegetables) {
-        System.out.println("Cooking a salad:");
+    private List<Vegetable> vegetables = new ArrayList<>();
 
+    public void setVegetables(List<Vegetable> vegetables) {
+        this.vegetables = vegetables;
+    }
+
+    public Salad cookSalad() {
         Salad cookedSalad = new Salad();
 
-        for (Vegetable v : vegetables) {
-            v.prepareForSalad();
-            cookedSalad.addVegetable(v);
+        if (vegetables.isEmpty()) {
+            return cookedSalad;
         }
+
+        System.out.println("Cooking a salad:");
+
+        vegetables.stream()
+                .peek(Vegetable::prepareForSalad)
+                .forEach(cookedSalad::addVegetable);
 
         return cookedSalad;
     }
